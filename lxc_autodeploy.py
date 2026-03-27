@@ -10,7 +10,8 @@ def main():
             memory = param['memory']
             network = param['network']
             disks = param['disks']
-            create_lxc_container(container_name, memory, network, disks)
+            node = param['node']
+            create_lxc_container(container_name, memory, network, disks, node)
         time.sleep(3600)  # Run every hour
 
 if __name__ == '__main__':
